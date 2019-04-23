@@ -44,7 +44,7 @@ namespace Jobhunt
             userData.streetName = "Boterbloemweide";
             userData.streetNumber = "17";
             userData.postalCode = "3448 HZ";
-            userData.email = "rolandmeijerink85@gmail.com";
+            userData.email = "rolandmeijerink@gmail.com";
             // userData.email = "wmvanWoerdt@gmail.com";
 
             userData.mainCareer = "4";
@@ -59,7 +59,7 @@ namespace Jobhunt
             userData.streetName = "Peuleyen";
             userData.streetNumber = "200";
             userData.postalCode = "2742ES";
-            userData.email = "rolandmeijerink85@gmail.com";
+            userData.email = "rolandmeijerink@gmail.com";
             //userData.email = " pieterVanderPol@yahoo.co.uk";
 
             userData.mainCareer = "8";
@@ -74,7 +74,7 @@ namespace Jobhunt
             userData.streetName = "Bieleveldlaan";
             userData.streetNumber = "53";
             userData.postalCode = "7906 HS";
-            userData.email = "rolandmeijerink85@gmail.com";
+            userData.email = "rolandmeijerink@gmail.com";
             //userData.email = "BarryBotterbloem@live.nl";
 
             userData.mainCareer = "4";
@@ -103,7 +103,7 @@ namespace Jobhunt
             userData.streetName = "Pieterskerkgracht";
             userData.streetNumber = "17";
             userData.postalCode = "2311 SZ";
-            userData.email = "rolandmeijerink85@gmail.com";
+            userData.email = "rolandmeijerink@gmail.com";
             //userData.email = "vanderboom@gmail.com";
 
             userData.mainCareer = "6";
@@ -225,11 +225,6 @@ namespace Jobhunt
                     _jobApplication = new JobApplications();
 
                     _jobApplication.JobApplCompanyQuestions = _Utility.Encrypt("Over de functie: - Hoeveel ontwikkelaars zijn er nu" +
-                    "-Hoe werken jullie. Wordt er een softwareontwikkelingsmethode gebruikt ?" +
-                  "-Wat zijn volgens jullie de belangrijkste vaardigheden die een ontwikkelaar dient te bezitten voor deze functie?" +
-                        "-Hoe wordt het testen nu gedaan?" +
-                    "Vragen over het product:" +
-                    "-Welke technieken gebruiken jullie precies voor jullie product? PHP, jQuery, MySQL, HTML, CSS?" +
                     "-Is het een SAAS product?");
 
                     _jobApplication.JobApplDateTime = DateTime.Now.AddDays(-i * 6);
@@ -241,64 +236,32 @@ namespace Jobhunt
                     _jobApplication.JobApplInterviewNotes = _Utility.Encrypt(" We zijn op zoek naar uitbreiding van ons team met een junior programmeur php die geïnteresseerd is door te groeien naar een senior development rol."
                         + "Afhankelijk van de snelheid waarmee je e.a kan oppakken begint het met testen van de applicatie en bug fixen en mee ontwikkelen van nieuwe functionaliteit");
 
-                    _jobApplication.JobApplInterviewPersons = _Utility.Encrypt("Pieter werkdam, Marcel Ruiter, Peter van der Vorst");
+                    _jobApplication.JobApplInterviewPersons = _Utility.Encrypt("Pieter werkdam");
                     _jobApplication.JobApplInterviewPreperation = _Utility.Encrypt(" We zijn op zoek naar uitbreiding van ons team met een junior programmeur php die geïnteresseerd is door te groeien naar een senior development rol."
                         + "Afhankelijk van de snelheid waarmee je e.a kan oppakken begint het met testen van de applicatie en bug fixen en mee ontwikkelen van nieuwe functionaliteit");
 
                     _jobApplication.JobApplInterviewTime = "12" + ":" + "30";
-                    _jobApplication.JobApplLetter = _Utility.Encrypt("Geachte Herman Assink," +
-                    " Ik wil hierbij graag mijn interesse laten blijken voor de door u aangeboden vacature: ‘software engineer’." +
-                    " Ik heb recent de studie HBO informatica afgerond aan de LOI Hogeschool en ben nu op zoek naar een functie als softwareontwikkelaar in Overijssel" +
-                    "of Drenthe.Deze functie spreekt mij vooral aan omdat ik mij als softwareontwikkelaar graag zou willen specialiseren in een deelgebied van de informatica" +
-                    " die mijn interesse heeft.GIS is een deelgebied van de informatica die mij interesseert omdat ik het een interessante combinatie vind van datavisualisatie," +
-                    "big-data, en geografie. Ik heb geografische informatie altijd interessant gevonden en ben dan ook een fervent gebruiker van Google Earth / Google Maps" +
-                    "en ik bladerde vroeger graag door de Grote Bosatlas. Het spreekt mij daarnaast ook aan dat jullie gespecialiseerd zijn in open source software en " +
-                    "dat jullie naast maatwerkopdrachten voor overheidsinstanties ook eigen producten ontwikkelen zoals PlanoView, Geoide en DynaCAP. Ik denk dat ik mij " +
-                    "in deze functie op technisch gebied snel verder kan ontwikkelen en mijn huidige kennis van softwareontwikkeling goed kan inzetten." +
-                    "Gedurende de studie HBO informatica heb ik brede theoretische kennis kunnen opdoen over softwareontwikkeling en heb ik mij naast programmeertalen zoals JAVA" +
-                    ", C#.net, en VB.net, ook veel bezig gehouden met programmeertalen en technieken waarmee dynamische websites gemaakt kunnen worden zoals:" +
-                    "Javascript, ASP.net, en PHP. Ook opmaaktalen zoals HTML en CSS kwamen uitgebreid aan bod. Tijdens mijn vorige functie als webdeveloper bij 2Jours" +
-                    "heb ik geprogrammeerd in ASP.net en heb ik mijn kennis van Jquery, Javascript, HTML en CSS verder kunnen uitbreiden en verbeteren." +
-
-                    "Ervaring met de programmeertaal PHP heb ik opgedaan gedurende mijn afstudeeropdracht bij Agri Trader. Het onderwerp was " +
-                    "het ontwerpen en programmeren van nieuwe zoekfunctionaliteiten voor de advertentiewebsite van Agri Trader. Tijdens de opdracht heb ik" +
-                    "onderzocht welke zoekfunctionaliteiten er nodig waren, hoe de user interface van de nieuwe zoekfunctionaliteiten het beste opgezet kon worden," +
-                   " en hoe de zoekfunctionaliteiten technisch het best opgezet konden worden.Ik heb gedurende de afstudeeropdracht zowel geprogrammeerd aan de ‘front-end’" +
-                    "(Javascript, CSS, en HTML) als aan de ‘back-end’ (PHP 5 en MySQL) van de nieuwe zoekfunctionaliteiten." +
-                    "In de bijlage treft u mijn C.V.aan.Ik ben uiteraard graag bereid hierop een toelichting te geven." +
-                    "Met vriendelijke groeten," +
-                    "Roland Meijerink" +
-                    "LinkedIn: http://nl.linkedin.com/pub/roland-meijerink/61/976/75a");
+                    _jobApplication.JobApplLetter = _Utility.Encrypt("LinkedIn: http://nl.linkedin.com/pub/roland-meijerink/61/976/75a");
 
                     _jobApplication.JobApplMethod = _Utility.Encrypt("Bedrijfs website");
                     _jobApplication.JobApplMyFollowUpEmails = _Utility.Encrypt(" We zijn op zoek naar uitbreiding van ons team met een junior programmeur php die geïnteresseerd is door te groeien naar een senior development rol."
                         + "Afhankelijk van de snelheid waarmee je e.a kan oppakken begint het met testen van de applicatie en bug fixen en mee ontwikkelen van nieuwe functionaliteit");
 
                     _jobApplication.JobApplMyQuestions = _Utility.Encrypt("Over de functie: - Hoeveel ontwikkelaars zijn er nu" +
-                    "-Hoe werken jullie. Wordt er een softwareontwikkelingsmethode gebruikt ?" +
-                  "-Wat zijn volgens jullie de belangrijkste vaardigheden die een ontwikkelaar dient te bezitten voor deze functie?" +
-                        "-Hoe wordt het testen nu gedaan?" +
-                    "Vragen over het product:" +
-                    "-Welke technieken gebruiken jullie precies voor jullie product? PHP, jQuery, MySQL, HTML, CSS?" +
                     "-Is het een SAAS product?");
 
                     _jobApplication.JobApplMyRating = "5";
                     _jobApplication.JobApplName = _Utility.Encrypt("Solicitatie" + i.ToString() + " " + _Utility.Decrypt(_user.FirstName) + " " + _Utility.Decrypt(_user.LastName));
                     _jobApplication.JobApplNote = _Utility.Encrypt("Over de functie: - Hoeveel ontwikkelaars zijn er nu" +
-                    "-Hoe werken jullie. Wordt er een softwareontwikkelingsmethode gebruikt ?" +
-                  "-Wat zijn volgens jullie de belangrijkste vaardigheden die een ontwikkelaar dient te bezitten voor deze functie?" +
-                        "-Hoe wordt het testen nu gedaan?" +
-                    "Vragen over het product:" +
-                    "-Welke technieken gebruiken jullie precies voor jullie product? PHP, jQuery, MySQL, HTML, CSS?" +
                     "-Is het een SAAS product?");
 
                     _jobApplication.JobApplSecInterviewDateTime = DateTime.Now.AddDays(-i * 4);
-                    _jobApplication.JobApplSecInterviewPersons = _Utility.Encrypt("Pieter werkdam, Marcel Ruiter, Peter van der Vorst");
+                    _jobApplication.JobApplSecInterviewPersons = _Utility.Encrypt("Pieter werkdam");
                     _jobApplication.JobApplSecInterviewTime = "12" + ":" + "40";
 
                     _jobApplication.JobApplStatus = "Job application sended";
                     _jobApplication.JobApplThirdInterviewDateTime = DateTime.Now.AddDays(-i * 3);
-                    _jobApplication.JobApplThirdInterviewPersons = _Utility.Encrypt("Pieter werkdam, Marcel Ruiter, Peter van der Vorst");
+                    _jobApplication.JobApplThirdInterviewPersons = _Utility.Encrypt("Pieter werkdam");
                     _jobApplication.JobApplThirdInterviewTime = "15" + ":" + "40";
 
                     _jobApplication.JobApplTime = "15" + ":" + "40";
@@ -311,16 +274,11 @@ namespace Jobhunt
                     _jobApplication.VacancyCompanyStreetName = _Utility.Encrypt("Lange Spruit");
                     _jobApplication.VacancyCompanyStreetNumber = _Utility.Encrypt("1a");
                     _jobApplication.VacancyCompanySummary = _Utility.Encrypt("Over de functie: - Hoeveel ontwikkelaars zijn er nu" +
-                    "-Hoe werken jullie. Wordt er een softwareontwikkelingsmethode gebruikt ?" +
-                  "-Wat zijn volgens jullie de belangrijkste vaardigheden die een ontwikkelaar dient te bezitten voor deze functie?" +
-                        "-Hoe wordt het testen nu gedaan?" +
-                    "Vragen over het product:" +
-                    "-Welke technieken gebruiken jullie precies voor jullie product? PHP, jQuery, MySQL, HTML, CSS?" +
                     "-Is het een SAAS product?");
 
                     _jobApplication.VacancyCompanyWebsite = _Utility.Encrypt("http://www.degrosolutions.nl/");
                     _jobApplication.VacancyCompanyZipCode = _Utility.Encrypt("7773 NE");
-                    _jobApplication.VacancyContactPerson = _Utility.Encrypt("Pieter werkdam, Marcel Ruiter, Peter van der Vorst");
+                    _jobApplication.VacancyContactPerson = _Utility.Encrypt("Pieter werkdam");
                     _jobApplication.VacancyContactPersonEmail = _Utility.Encrypt("rolandmeijerink@gmail.com");
                     _jobApplication.VacancyContactPersonLinkedIn = _Utility.Encrypt("https://www.linkedin.com/in/roland-meijerink-75a97661/");
                     _jobApplication.VacancyFunctionTitle = _Utility.Encrypt("C# developer");
