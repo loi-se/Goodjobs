@@ -1,0 +1,114 @@
+﻿@model Jobhunt.Models.JobApplications
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>JobApplications</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.UserId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UserId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.JobApplDateTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.JobApplDateTime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.JobApplName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.JobApplName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VacancyTitle)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VacancyTitle)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VacancyText)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VacancyText)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VacancyContactPerson)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VacancyContactPerson)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VacancyCompany)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VacancyCompany)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VacancyCompanyCity)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VacancyCompanyCity)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VacancyCompanyStreetName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VacancyCompanyStreetName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VacancyCompanyStreetNumber)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VacancyCompanyStreetNumber)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.VacancyCompanyZipCode)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.VacancyCompanyZipCode)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

@@ -1,0 +1,125 @@
+﻿@model Jobhunt.Models.JobApplications
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <h4>JobApplications</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.ID)
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.UserId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.JobApplDateTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.JobApplDateTime, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.JobApplDateTime, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.JobApplName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.JobApplName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.JobApplName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.VacancyTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VacancyTitle, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VacancyTitle, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.VacancyText, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VacancyText, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VacancyText, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.VacancyContactPerson, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VacancyContactPerson, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VacancyContactPerson, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.VacancyCompany, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VacancyCompany, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VacancyCompany, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.VacancyCompanyCity, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VacancyCompanyCity, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VacancyCompanyCity, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.VacancyCompanyStreetName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VacancyCompanyStreetName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VacancyCompanyStreetName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.VacancyCompanyStreetNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VacancyCompanyStreetNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VacancyCompanyStreetNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.VacancyCompanyZipCode, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.VacancyCompanyZipCode, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.VacancyCompanyZipCode, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>

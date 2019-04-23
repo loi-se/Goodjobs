@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JobHuntModelStoreContainer" CdmEntityContainer="JobHuntModelContainer">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(JobHuntModel.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="StreetNumber" ColumnName="StreetNumber" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="LinkedIn" ColumnName="LinkedIn" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="MainCareer" ColumnName="MainCareer" />
+          <ScalarProperty Name="SubCareer" ColumnName="SubCareer" />
+          <ScalarProperty Name="Friends" ColumnName="Friends" />
+          <ScalarProperty Name="SearchTag" ColumnName="SearchTag" />
+          <ScalarProperty Name="FriendsInvRecieved" ColumnName="FriendsInvRecieved" />
+          <ScalarProperty Name="FriendsInvSend" ColumnName="FriendsInvSend" />
+          <ScalarProperty Name="Resume" ColumnName="Resume" />
+          <ScalarProperty Name="Categories" ColumnName="Categories" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobApplications">
+      <EntityTypeMapping TypeName="IsTypeOf(JobHuntModel.JobApplications)">
+        <MappingFragment StoreEntitySet="JobApplications">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="JobApplDateTime" ColumnName="JobApplDateTime" />
+          <ScalarProperty Name="JobApplName" ColumnName="JobApplName" />
+          <ScalarProperty Name="VacancyTitle" ColumnName="VacancyTitle" />
+          <ScalarProperty Name="VacancyText" ColumnName="VacancyText" />
+          <ScalarProperty Name="VacancyContactPerson" ColumnName="VacancyContactPerson" />
+          <ScalarProperty Name="VacancyContactPersonLinkedIn" ColumnName="VacancyContactPersonLinkedIn" />
+          <ScalarProperty Name="VacancyCompany" ColumnName="VacancyCompany" />
+          <ScalarProperty Name="VacancyCompanyCity" ColumnName="VacancyCompanyCity" />
+          <ScalarProperty Name="VacancyCompanyStreetName" ColumnName="VacancyCompanyStreetName" />
+          <ScalarProperty Name="VacancyCompanyStreetNumber" ColumnName="VacancyCompanyStreetNumber" />
+          <ScalarProperty Name="VacancyCompanyZipCode" ColumnName="VacancyCompanyZipCode" />
+          <ScalarProperty Name="JobApplFeedback" ColumnName="JobApplFeedback" />
+          <ScalarProperty Name="VacancyLink" ColumnName="VacancyLink" />
+          <ScalarProperty Name="JobApplStatus" ColumnName="JobApplStatus" />
+          <ScalarProperty Name="VacancyFunctionTitle" ColumnName="VacancyFunctionTitle" />
+          <ScalarProperty Name="VacancyCompanyWebsite" ColumnName="VacancyCompanyWebsite" />
+          <ScalarProperty Name="JobApplNote" ColumnName="JobApplNote" />
+          <ScalarProperty Name="JobApplTime" ColumnName="JobApplTime" />
+          <ScalarProperty Name="JobApplLetter" ColumnName="JobApplLetter" />
+          <ScalarProperty Name="JobApplInterviewDateTime" ColumnName="JobApplInterviewDateTime" />
+          <ScalarProperty Name="JobApplInterviewTime" ColumnName="JobApplInterviewTime" />
+          <ScalarProperty Name="JobApplSecInterviewDateTime" ColumnName="JobApplSecInterviewDateTime" />
+          <ScalarProperty Name="JobApplSecInterviewTime" ColumnName="JobApplSecInterviewTime" />
+          <ScalarProperty Name="VacancyContactPersonEmail" ColumnName="VacancyContactPersonEmail" />
+          <ScalarProperty Name="VacancyCompanyCountry" ColumnName="VacancyCompanyCountry" />
+          <ScalarProperty Name="VacancyCareerField" ColumnName="VacancyCareerField" />
+          <ScalarProperty Name="JobApplThirdInterviewDateTime" ColumnName="JobApplThirdInterviewDateTime" />
+          <ScalarProperty Name="JobApplThirdInterviewTime" ColumnName="JobApplThirdInterviewTime" />
+          <ScalarProperty Name="JobApplInterviewPersons" ColumnName="JobApplInterviewPersons" />
+          <ScalarProperty Name="JobApplSecInterviewPersons" ColumnName="JobApplSecInterviewPersons" />
+          <ScalarProperty Name="JobApplThirdInterviewPersons" ColumnName="JobApplThirdInterviewPersons" />
+          <ScalarProperty Name="JobApplMyRating" ColumnName="JobApplMyRating" />
+          <ScalarProperty Name="JobApplInterviewPreperation" ColumnName="JobApplInterviewPreperation" />
+          <ScalarProperty Name="JobApplMyQuestions" ColumnName="JobApplMyQuestions" />
+          <ScalarProperty Name="JobApplCompanyQuestions" ColumnName="JobApplCompanyQuestions" />
+          <ScalarProperty Name="VacancySalary" ColumnName="VacancySalary" />
+          <ScalarProperty Name="VacancyCompanySummary" ColumnName="VacancyCompanySummary" />
+          <ScalarProperty Name="JobApplMyFollowUpEmails" ColumnName="JobApplMyFollowUpEmails" />
+          <ScalarProperty Name="JobApplFollowUpStatus" ColumnName="JobApplFollowUpStatus" />
+          <ScalarProperty Name="JobApplMethod" ColumnName="JobApplMethod" />
+          <ScalarProperty Name="JobApplInterviewNotes" ColumnName="JobApplInterviewNotes" />
+          <ScalarProperty Name="UserUserId" ColumnName="UserUserId" />
+          <ScalarProperty Name="ShowToFriends" ColumnName="ShowToFriends" />
+          <ScalarProperty Name="JobApplCat" ColumnName="JobApplCat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

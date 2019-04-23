@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Jobhunt.Models.JobApplications>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobApplDateTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobApplName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VacancyTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VacancyText)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VacancyContactPerson)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VacancyCompany)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VacancyCompanyCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VacancyCompanyStreetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VacancyCompanyStreetNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VacancyCompanyZipCode)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobApplDateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobApplName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacancyTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacancyText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacancyContactPerson)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacancyCompany)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacancyCompanyCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacancyCompanyStreetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacancyCompanyStreetNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VacancyCompanyZipCode)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

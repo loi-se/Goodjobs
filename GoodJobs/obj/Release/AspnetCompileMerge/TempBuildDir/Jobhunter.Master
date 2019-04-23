@@ -1,0 +1,162 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Jobhunter.Master.cs" Inherits="Jobhunt.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>GoodJobs</title>
+    <%-- ------ CSS ------ --%>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+        <!-- /top-link-block -->
+    <!-- Jscript -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/wow.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHeader" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="shortcut icon" href="images/jobapplicant.ico" />
+        <style type="text/css">
+        #info {
+            margin: 0px;
+            position: absolute;
+            background-color: #FC7119;  /*This should match your logo's color*/ 
+        }
+
+        #canvas-interactive {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        #canvas-reference {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .animationLogo {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <header id="header">
+    <div class="top-bar">
+    <asp:Panel ID="panelUserManagement" runat="server" Height="60">
+    <div class="container">
+    <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+       <div class="top-number"><p><i class="fa fa-thumbs-up"></i><asp:Label ID="lblWelcome" runat="server" Text=""></asp:Label></p></div>
+    </div>
+     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="collapse navbar-collapse navbar-right">
+     <ul class="nav navbar-nav">
+        <li><a href="MyAccount.aspx">My Account</a></li>
+        <li><a href="Logout.aspx">Logout</a></li>
+     </ul>          
+    </div>
+    </div>
+    </div>
+
+          </div><%--container--%>
+        </asp:Panel>
+
+        </div><%--/top-bar--%>
+       <nav class="navbar navbar-inverse" role="banner" style="width: 100%;">      
+            <div class="container">
+                   <table border="0" cellpadding="5" cellspacing="10" height="80px" style="width: 100%; position: relative">
+               <tr>
+              <td style="width:40%"> 
+                <%--<div class="navbar-header">--%>
+                <div id="Info" style=" position:relative; top:0px; left:0px; z-index:1; height: 126px; background-color: #151515;">
+                        <asp:label ID="lSlogan" runat="server" text="Connect the dots in your job search." Font-Bold="true" ForeColor="Orange" Font-Size="Small"></asp:label>
+                        <img class="logo"  src="images/LogoGoodJobs2.png" alt="..." id="logo"/>
+                     </div>
+
+                  </td>
+                   <td style="width:60%">
+                <asp:Panel ID="panelUserFunctionality" runat="server">
+                    <ul class="nav navbar-nav">
+                        <li><a href="Default.aspx">Home</a></li>
+                       <li><a href="Dashboard.aspx">Dashboard</a></li>                       
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="width: 120px">Contacts <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" style="width: 200px">
+                                <li><a href="ContactsSearch.aspx">Search and invite users</a></li>
+                                <li><a href="ContactsInvitations.aspx">My contact invitations</a></li>
+                                <li><a href="Contacts.aspx">My contacts</a></li>
+                            </ul>
+                        </li>
+                        <li><asp:LinkButton ID="LinkButton1" runat="server" OnClick="newJobApplication">New job application</asp:LinkButton></li>
+                    <%--<li><a href="#" runat="server" OnClick="newJobApplication">Job Application</a></li>  --%>
+                    <%--<li><a href="JobApplications.aspx" runat="server" OnClick="newJobApplication">Job Application</a></li>      --%>             
+                    </ul>
+               </asp:Panel>
+                       </td>
+                   </tr>
+            </table>
+                	</div>
+        </nav><!--/nav-->
+ 
+    </header>
+    <section id="feature">
+
+        <div class="container">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                </asp:ContentPlaceHolder>
+
+            </div><!--/.container-->
+    </header>
+
+   <!--/#bottom-->
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2018 GoodJobs. All Rights Reserved.
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="Default.aspx">Home</a></li>
+                        <li><a href="About.aspx">About Us</a></li>
+                        <li><a href="Faq.aspx">Faq</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top"><i class="fa fa-2x fa-angle-up"></i></a>
+    </footer>
+
+    <!--/#footer-->
+    <!-- Back To Top -->
+      
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderFooter" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

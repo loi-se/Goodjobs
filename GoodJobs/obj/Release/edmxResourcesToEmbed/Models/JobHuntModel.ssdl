@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JobHuntModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="JobApplications">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobApplDateTime" Type="datetime" />
+    <Property Name="JobApplName" Type="nvarchar(max)" />
+    <Property Name="VacancyTitle" Type="nvarchar(max)" />
+    <Property Name="VacancyText" Type="nvarchar(max)" />
+    <Property Name="VacancyContactPerson" Type="nvarchar(max)" />
+    <Property Name="VacancyContactPersonLinkedIn" Type="nvarchar(max)" />
+    <Property Name="VacancyCompany" Type="nvarchar(max)" />
+    <Property Name="VacancyCompanyCity" Type="nvarchar(max)" />
+    <Property Name="VacancyCompanyStreetName" Type="nvarchar(max)" />
+    <Property Name="VacancyCompanyStreetNumber" Type="nvarchar(max)" />
+    <Property Name="VacancyCompanyZipCode" Type="nvarchar(max)" />
+    <Property Name="JobApplFeedback" Type="nvarchar(max)" />
+    <Property Name="VacancyLink" Type="nvarchar(max)" />
+    <Property Name="JobApplStatus" Type="nvarchar(max)" />
+    <Property Name="VacancyFunctionTitle" Type="nvarchar(max)" />
+    <Property Name="VacancyCompanyWebsite" Type="nvarchar(max)" />
+    <Property Name="JobApplNote" Type="nvarchar(max)" />
+    <Property Name="JobApplTime" Type="nvarchar(max)" />
+    <Property Name="JobApplLetter" Type="nvarchar(max)" />
+    <Property Name="JobApplInterviewDateTime" Type="datetime" />
+    <Property Name="JobApplInterviewTime" Type="nvarchar(max)" />
+    <Property Name="JobApplSecInterviewDateTime" Type="datetime" />
+    <Property Name="JobApplSecInterviewTime" Type="nvarchar(max)" />
+    <Property Name="VacancyContactPersonEmail" Type="nvarchar(max)" />
+    <Property Name="VacancyCompanyCountry" Type="nvarchar(max)" />
+    <Property Name="VacancyCareerField" Type="nvarchar(max)" />
+    <Property Name="JobApplThirdInterviewDateTime" Type="datetime" />
+    <Property Name="JobApplThirdInterviewTime" Type="nvarchar(max)" />
+    <Property Name="JobApplInterviewPersons" Type="nvarchar(max)" />
+    <Property Name="JobApplSecInterviewPersons" Type="nvarchar(max)" />
+    <Property Name="JobApplThirdInterviewPersons" Type="nvarchar(max)" />
+    <Property Name="JobApplMyRating" Type="nvarchar(max)" />
+    <Property Name="JobApplInterviewPreperation" Type="nvarchar(max)" />
+    <Property Name="JobApplMyQuestions" Type="nvarchar(max)" />
+    <Property Name="JobApplCompanyQuestions" Type="nvarchar(max)" />
+    <Property Name="VacancySalary" Type="nvarchar(max)" />
+    <Property Name="VacancyCompanySummary" Type="nvarchar(max)" />
+    <Property Name="JobApplMyFollowUpEmails" Type="nvarchar(max)" />
+    <Property Name="JobApplFollowUpStatus" Type="nvarchar(max)" />
+    <Property Name="JobApplMethod" Type="nvarchar(max)" />
+    <Property Name="JobApplInterviewNotes" Type="nvarchar(max)" />
+    <Property Name="UserUserId" Type="int" Nullable="false" />
+    <Property Name="ShowToFriends" Type="nvarchar(max)" />
+    <Property Name="JobApplCat" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StreetName" Type="nvarchar(max)" />
+    <Property Name="StreetNumber" Type="nvarchar(max)" />
+    <Property Name="City" Type="nvarchar(max)" />
+    <Property Name="ZipCode" Type="nvarchar(max)" />
+    <Property Name="LinkedIn" Type="nvarchar(max)" />
+    <Property Name="Country" Type="nvarchar(max)" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="MainCareer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SubCareer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Friends" Type="nvarchar(max)" />
+    <Property Name="SearchTag" Type="nvarchar(max)" />
+    <Property Name="FriendsInvRecieved" Type="nvarchar(max)" />
+    <Property Name="FriendsInvSend" Type="nvarchar(max)" />
+    <Property Name="Resume" Type="nvarchar(max)" />
+    <Property Name="Categories" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_UserJobApplications">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="JobApplications" Type="Self.JobApplications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="JobApplications">
+        <PropertyRef Name="UserUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JobHuntModelStoreContainer">
+    <EntitySet Name="JobApplications" EntityType="Self.JobApplications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_UserJobApplications" Association="Self.FK_UserJobApplications">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="JobApplications" EntitySet="JobApplications" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

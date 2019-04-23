@@ -1,0 +1,83 @@
+﻿1. Google maps api Key
+2. encrypting/ decrypting user data ------v
+3. time boxes to the left. ------v
+3. Centreren column headers in alle gridviews. -----v
+4. mouse event on canvas in main screen. ------v
+5. route plotter in google maps.
+
+
+6. Invitations S:1,A:2,D:3 (send, accepted, denied)
+
+7. Zoekfunctie voor je jobapplications. -----v
+8. Na registraie: Your account is created: please login: -----v
+8. Zoekfunctie voor contacten inbouwen -----v
+
+9. Inloggen met e-mail ----v
+10. forgot password function.
+11. Plot placemarks per page view. --------v
+
+12. Bug met verkeerde Job Application id bij edit of view. --------v
+
+13. Dubbele accounts met hetzelfde e-mail adres mag niet mogelijk zijn. ----v
+
+13. Versleutelen pagina parameters.-----V (Session object gebruikt).
+14. job application ID niet in kalender weergeven voor veiligheid. ------v
+14. View modus: links als hyperlink weergeven -----v
+15. Aantal job applications per maand voor de afgelopen 6 maanden. -----V
+16. phone number of job application vacancy.
+17. Gmail synchronisatie met kalender?
+
+18. Job application category kunnen toevoegen. ------V
+19. Status closed kunnen toevoegen (dan anders weergeven in gridview). 
+20. Faq general and userguide (only viewable when logged in).
+21. C.V. kunnen toevoegen in user account?
+
+22. Kunnen exporteren naar PDF ------v
+
+
+23. Edit gaat niet goed in Gridview van Job Application (kwam door OnPageleave event waarbij Session("viewType") leeggemaakt werd. 
+Session("viewType") verliest waarde bij drukken op Edit knop (nieuwe pager is succesvol ingebouwd in Jobapplications Gridview) ----------v
+
+24. nieuwe pager is succesvol ingebouwd in Contacts gridview (nog een paar bugjes).
+25. new job application -> laatste viewtype wordt overgenomen (Bug). -----------v
+
+26. Bug bij accepteren uitnodiging (de receiver friends wordt niet geupdate (sender friends wel)).-------v
+
+
+------------
+27. To-do: bug: Als je een uitnodiging accepteert dan wordt de uitnodiging niet bij de eerste klik gelijk geaccepteerd maar pas bij de tweede klik. !!!!!!!! -----------------V
+28. Collapsable interview panel!! must have -------V
+29. Calendar andere kleur -------------V
+30. Category kunnen toevoegen en aantal sollicitaties per categorie overzichtelijk kunnen inzien per maand. -------v
+31. regions per country en bij zoekmenu op deze velden kunnen selecteren.
+32. Word cloud control voor vacatures en brieven. -------------V
+
+33. BUG: Contacten job applications view werkt niet nadat je blader knoppen gebruikt hebt bij een ander contact? --- IMPORTANT       ---------------------V
+34. Kunnen zoeken op bedrijf (of het contact bij dit bedrijf gesolliciteerd heeft) -------------V
+
+35. Contact kunnen openen in user account view?
+36. My account -> naar new job application (password is nodig?  -- BUGGG!
+37 Accepted received invitation withdraw option. -----------------V
+38 Word cloud different each load? Huhhhh? 
+
+Major bug in search button and view all (works after seconed click) ------------------V
+Witdraw invitation function! ------ V
+Show Last sended and recieved invitations at first place. -------V
+
+39. Witdraw accepted invitation remove contact removes not always the riht contact -> MAJOR !!!! ------------------V
+40. Add Job application statuses: closed and concept.----V
+
+41. Klapper bij exporteren naar pdf als bij nieuwe onopgeslagen sollicitatie.-------V
+42. Bij controle of de persoon al uitgenodigd is kijken bij contacten en niet invitations.----------V (alleen laatst verzonden uitnodiging controleren)
+43. Dashboard personal statistics: nof received inv and send inv. ------V
+
+=================================================
+
+41. Filter for job application status and category
+44. Dashboard -> weergave niet goed in IE en Firefox. 
+45. ContactSearch --> show number of results.
+46. Opening a page when not logged in is possible - Crtrl C -> /contactsSearch.aspx -> Ctrl V in firefox and you can search !!!! ---------------V
+47. User authentication. Only pages register/ login/ and default accessible for not logged in user!.  ----------------V
+48. Help buttons at contacts functionalities --------------------V
+49. Info box with Tipsy javascript library? ------------V (ajax toolkit balloon)
+50. BUG: if contact has no job applications pager control is visible and causes a show stopper!!!

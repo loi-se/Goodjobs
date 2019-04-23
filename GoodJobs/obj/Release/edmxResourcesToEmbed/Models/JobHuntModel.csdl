@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="JobHuntModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="JobHuntModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="JobHuntModel.User" />
+    <EntitySet Name="JobApplications" EntityType="JobHuntModel.JobApplications" />
+    <AssociationSet Name="UserJobApplications" Association="JobHuntModel.UserJobApplications">
+      <End Role="User" EntitySet="Users" />
+      <End Role="JobApplications" EntitySet="JobApplications" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="StreetName" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="StreetNumber" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ZipCode" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="LinkedIn" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Country" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="true" Precision="3" />
+    <Property Name="MainCareer" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SubCareer" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Friends" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SearchTag" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FriendsInvRecieved" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FriendsInvSend" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Resume" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Categories" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="JobApplications">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobApplDateTime" Type="DateTime" Nullable="true" Precision="3" />
+    <Property Name="JobApplName" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyTitle" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyText" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyContactPerson" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyContactPersonLinkedIn" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyCompany" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyCompanyCity" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyCompanyStreetName" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyCompanyStreetNumber" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyCompanyZipCode" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplFeedback" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyLink" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplStatus" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyFunctionTitle" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyCompanyWebsite" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplNote" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplTime" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplLetter" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplInterviewDateTime" Type="DateTime" Nullable="true" Precision="3" />
+    <Property Name="JobApplInterviewTime" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplSecInterviewDateTime" Type="DateTime" Nullable="true" Precision="3" />
+    <Property Name="JobApplSecInterviewTime" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyContactPersonEmail" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyCompanyCountry" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyCareerField" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplThirdInterviewDateTime" Type="DateTime" Nullable="true" Precision="3" />
+    <Property Name="JobApplThirdInterviewTime" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplInterviewPersons" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplSecInterviewPersons" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplThirdInterviewPersons" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplMyRating" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplInterviewPreperation" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplMyQuestions" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplCompanyQuestions" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancySalary" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="VacancyCompanySummary" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplMyFollowUpEmails" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplFollowUpStatus" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplMethod" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplInterviewNotes" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="UserUserId" Type="Int32" Nullable="false" />
+    <Property Name="ShowToFriends" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="JobApplCat" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <Association Name="UserJobApplications">
+    <End Type="JobHuntModel.User" Role="User" Multiplicity="1" />
+    <End Type="JobHuntModel.JobApplications" Role="JobApplications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="JobApplications">
+        <PropertyRef Name="UserUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
