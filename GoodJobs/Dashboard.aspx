@@ -602,7 +602,7 @@
      <script type="text/javascript" src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/cloud.min.webforms.js"></script>
 
-   <%-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDosSQDg_x8pTJMnz2DuvwzAyyfcydviRo" type="text/javascript"></script>
+   <%-- <script src="https://maps.googleapis.com/maps/api/js?key=....." type="text/javascript"></script>
     <script type="text/javascript">--%>
 <%--        //jQuery(document).ready(function () {
 
