@@ -5,4 +5,4 @@ The working (beta) prototype of this project can be seen here:
 https://www.good-jobs-webapp.com
 
 
-![](GoodJobs\images\Dashboard-Screenshot.png)
+![](GoodJobs/images/Dashboard-Screenshot.png)
