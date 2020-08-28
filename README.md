@@ -3,3 +3,6 @@ I made this project to play around with the following techniques: ASP.NET webfor
 The working (beta) prototype of this project can be seen here:
 
 https://www.good-jobs-webapp.com
+
+
+![](GoodJobs\Images\Dashboard-Screenshot.png)
